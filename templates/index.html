@@ -1,0 +1,1168 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Reportes SiEMPRe</title>
+<link rel="icon" href="https://webappsullairargentina.blob.core.windows.net/sullair/static/website/images/favicon.png">
+
+<style>
+body{
+font-family:Nunito Regular;
+
+margin:0;
+}
+
+.container{
+display:flex;
+height:100vh;
+}
+
+.fechas{
+    display:flex;
+    flex-direction: column; 
+    gap:10px;
+}
+
+.fechas input{
+    width:140px;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: 0.3s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #00A859;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+
+.fila-fecha{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.fila-fecha label{
+    width: 110px; /* 🔥 clave para alinear */
+}
+
+.fila-fecha input{
+    flex: 1;
+}
+
+.panel-control{
+width:300px;
+padding:25px;
+padding-top:0;
+background:#f4f4f4;
+border-right:1px solid #ddd;
+
+height:100vh;        
+overflow-y:auto;     
+box-sizing:border-box;
+}
+
+.panel-control button:not(#btnVolver):not(#btnColapsar){
+    display:block;
+    margin: 10px auto;
+}
+
+.panel-reporte{
+flex:1;
+padding:10px;
+position: relative;
+}
+
+.btn-actualizar{
+    width: 80%;
+    height: 2.4rem;
+    border: none;
+    border-radius: 1.4rem;
+    background-color: #00A859;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+
+.btn-actualizar:hover{
+    background-color: #008f4a;
+}
+
+
+.btn-config{
+    width: 80%;
+    height: 2.4rem;
+    border: none;
+    border-radius: 1.4rem;
+    background-color: #ff5800;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+
+
+.btn-config:hover{
+    background-color: #d96c00;
+}
+
+button.simple-btn{
+    padding:10px 16px;
+    margin-top:10px;
+    margin-bottom:10px;
+    border:none;
+    border-radius:6px;
+    background:#ccc;
+    cursor:pointer;
+}
+
+button.simple-btn:hover{
+    background:#bbb;
+}
+
+#linkReporte{
+    display: block;
+}
+
+input{
+padding:6px;
+margin-top:5px;
+margin-bottom:10px;
+width: 100%;
+box-sizing: border-box;  
+max-width: 100%;
+}
+
+input[type="date"]{
+    width:140px;
+}
+
+select{
+padding:6px;
+margin-top:5px;
+margin-bottom:10px;
+width:100%;
+}
+
+#estado{
+margin-top:20px;
+font-weight:bold;
+}
+
+iframe{
+width:100%;
+height:100%;
+border:0;
+}
+
+/* PANEL CONFIG */
+#panelConfig{
+    display:none;
+    width:100%;
+    height:100%;
+    background:white;
+    padding:20px;
+    box-sizing:border-box;
+    overflow:auto;
+}
+
+.panel-control.colapsado {
+    width: 36px;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.panel-control.colapsado .contenido-panel {
+    display: none;
+}
+
+#barraTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2px 6px 2px;
+}
+
+.panel-control.colapsado #barraTop {
+    justify-content: center;
+}
+
+#btnVolver, #btnColapsar {
+    background: #e8e8e8;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+#btnVolver:hover, #btnColapsar:hover {
+    background: #d0d0d0;
+    color: #222;
+}
+
+.panel-control.colapsado #btnVolver {
+    display: none;
+}
+
+
+a[href=""], a[href="#"] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+a[href=""] img, a[href="#"] img {
+    filter: grayscale(100%) brightness(0.8);
+    cursor: not-allowed;
+    border-radius: 8px;
+    
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="panel-control" id="panelIzquierdo"; >
+
+<div id="barraTop">
+    <button id="btnVolver" onclick="window.location.href='http://siempreol.ddns.net/home'" title="Volver">Volver a SiEMPReOL</button>
+    <button id="btnColapsar" onclick="togglePanel()" title="Mostrar/Ocultar Menú">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;">
+            <rect x="1" y="1" width="14" height="14" rx="2" stroke="#555" stroke-width="1.2"/>
+            <line x1="5" y1="1" x2="5" y2="15" stroke="#555" stroke-width="1.2"/>
+        </svg>
+    </button>
+</div>
+
+<div class="contenido-panel">
+
+<h2>Reporte SiEMPRe</h2>
+
+<!-- Area de Trabajo: -->
+<div id="bloqueWorkspace" style="display:none;">
+    <h3>Area de Trabajo:</h3>
+    <select id="workspace" onchange="cambiarWorkspace()"></select>
+</div>
+
+<h3>Equipo/Reporte:</h3>
+<select id="dataset" onchange="cambiarDataset()"></select>
+
+<div class="fechas">
+    <div class="fila-fecha">
+        <label>Fecha Inicial:</label>
+        <input type="date" id="fechaInicial" title="Fecha Inicial desde las 00:00">
+    </div>
+
+    <div class="fila-fecha">
+        <label>Fecha Final:</label>
+        <input type="date" id="fechaFinal" title="Fecha Final hasta las 23:59">
+    </div>
+</div>
+
+<button class="btn-actualizar" onclick="ejecutarProceso()">
+    Actualizar dataset
+</button>
+
+<!--  BOTON CONFIG SOLO ADMIN -->
+<button id="btnConfig" class="btn-config" style="display:none;" onclick="toggleConfig()">
+    Configuración
+</button>
+
+<p id="estado"></p>
+
+<h3>Acceso a Reportes:</h3>
+
+<div style="display:flex; justify-content:center; align-items:center; gap:4px;">
+    <a id="linkReporte" href="#" target="_blank">
+        <img src="{% static 'Reporte.png' %}" style="width:92px; height:115px; cursor:pointer; display:block;">
+    </a>
+    <a id="linkReporteHistorico" href="#" target="_blank">
+        <img src="{% static 'Historicos.png' %}" style="width:92px; height:115px; cursor:pointer; display:block;">
+    </a>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel-reporte">
+
+<!-- 🔹 IFRAME -->
+<iframe id="reportePowerBI"></iframe>
+
+<!--  PANEL CONFIGURACION -->
+<div id="panelConfig">
+
+    <h2>Panel de Configuración</h2>
+
+    <!--  Toggle -->
+
+    <div style="margin-bottom:15px; display:flex; justify-content:space-between; align-items:center;">
+        <div>
+            <button class="simple-btn" onclick="cambiarModoConfig('ui')">Modo UI</button>
+            <button class="simple-btn" onclick="cambiarModoConfig('json')">Modo Avanzado</button>
+        </div>
+        <button class="simple-btn" onclick="toggleConfig()">Volver a Reporte</button>
+    </div>
+
+    <!--  MODO UI -->
+    <div id="configUI" style="display:none;"></div>
+
+    <!--  MODO JSON -->
+    <div id="configJSON">
+
+    <textarea id="configEditor" style="
+        width:100%;
+        height:70vh;  /* 🔥 clave */
+        background:#eee;
+        padding:15px;
+        font-family:monospace;
+        font-size:13px;
+        box-sizing: border-box;
+        resize: vertical;
+    "></textarea>
+    </div>
+
+        
+        <div style="display:flex; align-items:center; gap:10px; margin-top:10px;">
+        <button class="simple-btn" onclick="guardarConfig()">
+            Guardar Configuración
+        </button>
+
+        <span id="estadoConfig" style="font-weight:bold;"></span>
+    </div>
+
+    
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+let intervaloEstado = null
+let datasetsConfig = {}
+let workspaceActual = null
+let esAdmin = false
+let modo = "reporte" //  nuevo estado
+let modoConfig = "ui" //sino puedo poner json
+let configData = null
+let workspacesAbiertos = {}
+
+window.onload = function() {
+    cargarConfig()
+    cargarDatasets()
+}
+
+function cargarConfig(){
+
+    fetch("/api/powerbi/config/")
+    .then(res=>res.json())
+    .then(data=>{
+
+        configData = data
+
+        document.getElementById("configEditor").value = JSON.stringify(data, null, 2)
+
+    //    if(modoConfig === "ui"){
+    //        renderConfigUI()
+    //    }
+        cambiarModoConfig(modoConfig)
+    })
+    .catch(()=>{
+        document.getElementById("configEditor").value = "Error cargando configuración"
+    })
+
+}
+
+function guardarConfig(){
+
+    let configFinal
+
+    if(modoConfig === "ui"){
+        configFinal = configData
+    } else {
+        try{
+            configFinal = JSON.parse(document.getElementById("configEditor").value)
+        }catch(e){
+            mostrarEstadoConfig("JSON inválido", true)
+            return
+        }
+    }
+
+    if(configData.AUTO_REFRESH.email_enabled){
+
+        const emailStr = configData.AUTO_REFRESH.email
+
+        if(!emailStr){
+            mostrarEstadoConfig("Debe ingresar al menos un email", true) 
+            return
+        }
+
+        const emails = emailStr.split(",")
+
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+        for(let e of emails){
+            if(!regex.test(e.trim())){
+                mostrarEstadoConfig("Uno o más emails son inválidos", true)  
+                return
+            }
+        }
+    }    
+
+    fetch("/api/powerbi/config/",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify(configFinal)
+    })
+    .then(async res => {
+
+        const data = await res.json().catch(() => ({}))
+
+        if (!res.ok) {
+            throw new Error(data.error || "Error desconocido")
+        }
+
+        return data
+    })
+    .then(() => {
+        mostrarEstadoConfig("Guardado correctamente", false)
+    })
+    .catch(err => {
+        mostrarEstadoConfig(err.message, true)
+    })
+
+    
+    .catch(()=>{
+        mostrarEstadoConfig("Error guardando", true)
+    })
+}
+
+function cargarDatasets(workspace=null){
+
+    let url = "/api/powerbi/datasets/"
+
+    if(workspace){
+        url += "?workspace=" + workspace
+    }
+
+    fetch(url)
+    .then(res=>res.json())
+    .then(data=>{
+
+        datasetsConfig = data.datasets
+        workspaceActual = data.workspace_actual
+        esAdmin = data.is_admin
+
+        //  ADMIN UI
+        if(esAdmin){
+
+            document.getElementById("bloqueWorkspace").style.display = "block"
+            document.getElementById("btnConfig").style.display = "block"
+
+            // 🔥 SOLO cargar workspaces la primera vez
+            const select = document.getElementById("workspace")
+
+            if(select.options.length === 0){
+                cargarWorkspaces(data.workspaces, workspaceActual)
+            }
+        }
+
+        if(datasetsConfig.REPORT_LINK){
+            document.getElementById("linkReporte").href = datasetsConfig.REPORT_LINK
+        }
+        if(datasetsConfig.REPORT_LINK_HISTORICO){
+            document.getElementById("linkReporteHistorico").href = datasetsConfig.REPORT_LINK_HISTORICO
+        }
+        const select=document.getElementById("dataset")
+        select.innerHTML=""
+
+        const clavesIgnoradas = ["AUTO_REFRESH","REPORT_LINK","REPORT_LINK_HISTORICO"]
+
+        const nombres = Object.keys(datasetsConfig)
+            .filter(k => !clavesIgnoradas.includes(k))
+
+        nombres.forEach((nombre, index)=>{
+
+            const option=document.createElement("option")
+            option.value=nombre
+            option.text=nombre
+            option.dataset.workspace = workspace || workspaceActual
+
+            select.appendChild(option)
+
+            if(index===0){
+                select.value = nombre   // 🔥 asegura sync UI
+                actualizarIframe(nombre)
+                actualizarEnlacesReportes(nombre)
+            }
+        })
+
+    })
+    .catch(()=>{
+        document.getElementById("estado").innerText="Error cargando datasets"
+    })
+}
+
+function cargarWorkspaces(lista, actual){
+
+    const select = document.getElementById("workspace")
+    select.innerHTML = ""
+
+    //  ORDENAR ALFABÉTICAMENTE
+    const clavesIgnoradas = ["AUTO_REFRESH"]  // Aca puedo poner ["AUTO_REFRESH", "OTRA CLAVE"] si necesito otra clave
+
+    const ordenados = lista
+        .filter(ws => !clavesIgnoradas.includes(ws))
+        .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
+
+    ordenados.forEach(ws => {
+
+        const option = document.createElement("option")
+        option.value = ws
+        option.text = ws
+
+        if(ws === actual){
+            option.selected = true
+        }
+
+        select.appendChild(option)
+    })
+}
+function cambiarWorkspace(){
+    const ws = document.getElementById("workspace").value
+    cargarDatasets(ws)
+    const datasetSelect = document.getElementById("dataset")
+    if(datasetSelect.options.length > 0){
+        const nombreDataset = datasetSelect.value
+        actualizarEnlacesReportes(nombreDataset)
+    }
+}
+
+function cambiarDataset(){
+    const dataset=document.getElementById("dataset").value
+    actualizarIframe(dataset)
+    actualizarEnlacesReportes(dataset)
+}
+
+function actualizarIframe(nombre){
+    const iframe=document.getElementById("reportePowerBI")
+    iframe.src = datasetsConfig[nombre].IFRAME
+}
+
+function actualizarEnlacesReportes(nombreDataset){
+    const linkReporte = document.getElementById("linkReporte")
+    const linkReporteHistorico = document.getElementById("linkReporteHistorico")
+    
+    // Obtener el workspace actual
+    const datasetSelect = document.getElementById("dataset")
+    const selectedOption = datasetSelect.options[datasetSelect.selectedIndex]
+    const workspace = selectedOption.dataset.workspace
+    
+    const wsData = configData?.[workspace] || {}
+    
+    // Enlace del reporte actual (Report)
+    const reporteUrl = (wsData?.Report || "").trim()
+    if(reporteUrl && reporteUrl !== ""){
+        linkReporte.href = reporteUrl
+        linkReporte.removeAttribute("data-disabled")
+        linkReporte.title = ""
+    } else {
+        linkReporte.href = "#"
+        linkReporte.setAttribute("data-disabled", "true")
+        linkReporte.title = "Reporte no disponible"
+    }
+    
+    // Enlace del reporte histórico (ReportHistorico)
+    const reporteHistoricoUrl = (wsData?.ReportHistorico || "").trim()
+    if(reporteHistoricoUrl && reporteHistoricoUrl !== "" && reporteHistoricoUrl !== "https://"){
+        linkReporteHistorico.href = reporteHistoricoUrl
+        linkReporteHistorico.removeAttribute("data-disabled")
+        linkReporteHistorico.title = ""
+    } else {
+        linkReporteHistorico.href = "#"
+        linkReporteHistorico.setAttribute("data-disabled", "true")
+        linkReporteHistorico.title = "Reporte no disponible"
+    }
+}
+function togglePanel(){
+    const panel = document.getElementById("panelIzquierdo")
+    panel.classList.toggle("colapsado")
+}
+
+function toggleConfig(){
+
+    const iframe = document.getElementById("reportePowerBI")
+    const panel = document.getElementById("panelConfig")
+
+    if(modo === "reporte"){
+        iframe.style.display = "none"
+        panel.style.display = "block"
+        modo = "config"
+
+        //  cargar config
+        cargarConfig()
+
+    } else {
+        iframe.style.display = "block"
+        panel.style.display = "none"
+        modo = "reporte"
+    }
+}
+function ejecutarProceso(){
+
+    const fechaInicial=document.getElementById("fechaInicial").value
+    const fechaFinal=document.getElementById("fechaFinal").value
+    const dataset=document.getElementById("dataset").value
+
+    if(!fechaInicial || !fechaFinal){
+        document.getElementById("estado").innerText="Debe ingresar ambas fechas"
+        return
+    }
+
+    document.getElementById("estado").innerText="Iniciando actualización..."
+
+    fetch("/api/powerbi/parameters/",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+            fechaInicial:fechaInicial,
+            fechaFinal:fechaFinal,
+            dataset:dataset,
+            workspace:workspaceActual
+        })
+    })
+    .then(res=>res.json())
+    .then(data=>{
+
+        if(data.error){
+            document.getElementById("estado").innerText=data.error
+            return
+        }
+
+        document.getElementById("estado").innerText="Actualización iniciada..."
+
+        if(intervaloEstado){
+            clearInterval(intervaloEstado)
+        }
+
+        intervaloEstado=setInterval(()=>consultarEstado(dataset),30000)
+
+    })
+    .catch(()=>{
+        document.getElementById("estado").innerText="Error iniciando proceso"
+    })
+}
+
+function consultarEstado(dataset){
+
+    fetch(`/api/powerbi/refresh/status/?dataset=${dataset}&workspace=${workspaceActual}`)
+    .then(res=>res.json())
+    .then(data=>{
+
+        document.getElementById("estado").innerText=data.status
+
+        if(data.finalizado){
+            clearInterval(intervaloEstado)
+            recargarReporte()
+        }
+
+    })
+    .catch(()=>{
+        document.getElementById("estado").innerText="Error consultando estado"
+        clearInterval(intervaloEstado)
+    })
+}
+
+function recargarReporte(){
+    let iframe=document.getElementById("reportePowerBI")
+    iframe.src=iframe.src
+}
+
+function cambiarModoConfig(modo){
+
+    modoConfig = modo
+
+    const ui = document.getElementById("configUI")
+    const json = document.getElementById("configJSON")
+
+    if(modo === "ui"){
+        ui.style.display = "block"
+        json.style.display = "none"
+
+        renderConfigUI()
+
+    } else {
+        ui.style.display = "none"
+        json.style.display = "block"
+    }
+}
+function renderConfigUI(){
+
+    if(!configData.AUTO_REFRESH){
+        configData.AUTO_REFRESH = {
+            enabled:false,
+            day:"Lunes",
+            hour:0,
+            email_enabled:false,
+            email:""
+        }
+    }
+
+    // 🔥 asegurar campos nuevos si ya existía config
+    if(configData.AUTO_REFRESH.email_enabled === undefined){
+        configData.AUTO_REFRESH.email_enabled = false
+    }
+    if(configData.AUTO_REFRESH.email === undefined){
+        configData.AUTO_REFRESH.email = ""
+    }
+
+    let html = ""
+
+    // AUTO REFRESH
+    html += `
+    <div style="border:2px solid #00A859;padding:12px;margin-bottom:20px;border-radius:10px;display:inline-block;">
+        
+        <!-- FILA 1 -->
+        <div style="display:flex;align-items:center;gap:12px;white-space:nowrap;font-size:15px;flex-wrap:wrap;">
+
+            <label style="font-weight:bold;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                Actualización Automática:
+                <label class="switch">
+                    <input type="checkbox"
+                        ${configData.AUTO_REFRESH.enabled ? "checked":""}
+                        onchange="updateAutoRefreshEnabled(this.checked)">
+                    <span class="slider"></span>
+                </label>
+            </label>
+
+            <span style="font-weight:bold;">Día</span>
+
+            <select
+                style="padding:4px 8px;width:140px;"
+                ${!configData.AUTO_REFRESH.enabled ? "disabled":""}
+                onchange="updateAutoRefreshDay(this.value)">
+                ${["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]
+                    .map(d=>`<option ${configData.AUTO_REFRESH.day===d?"selected":""}>${d}</option>`)
+                    .join("")}
+            </select>
+
+            <span style="font-weight:bold;">Hora</span>
+
+            <select
+                style="padding:4px 8px;width:90px;"
+                ${!configData.AUTO_REFRESH.enabled ? "disabled":""}
+                onchange="updateAutoRefreshHour(this.value)">
+                ${Array.from({length:24},(_,i)=>
+                    `<option value="${i}" ${configData.AUTO_REFRESH.hour==i?"selected":""}>
+                        ${i.toString().padStart(2,"0")}:00
+                    </option>`
+                ).join("")}
+            </select>
+        </div>
+
+        <!-- FILA 2 EMAIL -->
+        <div style="margin-top:15px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:15px;">
+
+            <label style="font-weight:bold;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                Enviar Reporte Fallas:
+                <label class="switch">
+                    <input type="checkbox"
+                        ${configData.AUTO_REFRESH.email_enabled ? "checked":""}
+                        onchange="updateEmailEnabled(this.checked)">
+                    <span class="slider"></span>
+                </label>
+            </label>
+
+            <input
+                type="email"
+                placeholder="admin@empresa.com, otro@empresa.com"
+                value="${configData.AUTO_REFRESH.email}"
+                ${!configData.AUTO_REFRESH.email_enabled ? "disabled":""}
+                style="width:220px;"
+                onchange="updateEmail(this.value)">
+        </div>
+
+    </div>
+    `
+    // WORKSPACES
+    const workspaces = Object.keys(configData)
+        .filter(ws => ws !== "AUTO_REFRESH")
+        .sort((a,b)=>a.localeCompare(b))
+
+    let index = 1
+
+    for(const ws of workspaces){
+
+        const data = configData[ws]
+        const abierto = workspacesAbiertos[ws] || false
+
+        html += `
+        <div style="border:2px solid #999;padding:15px;margin-bottom:20px;border-radius:10px;background:#fafafa;box-shadow:0 2px 6px rgba(0,0,0,0.08);">
+
+            <h3 style="margin:0;display:flex;align-items:center;gap:10px;">
+
+                <span style="cursor:pointer;" onclick="toggleWorkspace('${ws}')">
+                    ${abierto ? "▼":"▶"}
+                </span>
+
+                <span style="flex:1;">
+                    Area de Trabajo ${index}:
+                    <input style="width:60%;" value="${ws}"
+                        onchange="renombrarWorkspace('${ws}', this.value)">
+                </span>
+
+                <button style="padding:4px 8px;background:#e74c3c;color:white;border:none;border-radius:5px;cursor:pointer;"
+                    onclick="eliminarWorkspace('${ws}')">
+                    ❌ Eliminar
+                </button>
+
+            </h3>
+        `
+
+        if(abierto){
+
+            html += `
+                <label>GRUPO AREA DE TRABAJO PBI:</label>
+                <input value="${data.PBI_GROUP_ID}"
+                    onchange="updateField('${ws}','PBI_GROUP_ID',this.value)">
+
+                <label>ENLACE ULTIMO REPORTE INFORMADO:</label>
+                <input value="${data.Report}"
+                    onchange="updateField('${ws}','Report',this.value)">
+                
+                <label>ENLACE REPORTES HISTÓRICOS:</label>
+                <input value="${data.ReportHistorico || ''}"
+                    onchange="updateField('${ws}','ReportHistorico',this.value)">
+
+                <h4>Datasets</h4>
+            `
+
+            for(const key of Object.keys(data)){
+
+                if(key === "PBI_GROUP_ID" || key === "Report") continue
+
+                const ds = data[key]
+
+                html += `
+                <div style="border:1px solid #ccc;padding:10px;margin-bottom:10px;border-radius:6px;background:#fff;">
+
+                    <b>
+                        <input value="${key}"
+                            onchange="renombrarDataset('${ws}','${key}',this.value)">
+                    </b><br>
+
+                    Dataset ID:
+                    <input value="${ds.PBI_DATASET_ID}"
+                        onchange="updateDatasetField('${ws}','${key}','PBI_DATASET_ID',this.value)">
+
+                    Link del Reporte:
+                    <input value="${ds.IFRAME}"
+                        onchange="updateDatasetField('${ws}','${key}','IFRAME',this.value)">
+
+                    <br>
+
+                    <button style="margin-top:5px;padding:4px 8px;background:#e74c3c;color:white;border:none;border-radius:5px;cursor:pointer;"
+                        onclick="eliminarDataset('${ws}','${key}')">
+                        ❌ Eliminar
+                    </button>
+
+                </div>
+                `
+            }
+
+            html += `
+            <button style="margin-top:10px;padding:6px 10px;background:#00A859;color:white;border:none;border-radius:5px;cursor:pointer;"
+                onclick="agregarDataset('${ws}')">
+                ➕ Agregar Dataset
+            </button>
+            `
+        }
+
+        html += `</div>`
+        index++
+    }
+
+    html += `
+    <br>
+    <button class="simple-btn" onclick="agregarWorkspace()">
+        ➕ Agregar Área de Trabajo
+    </button>
+    `
+
+    document.getElementById("configUI").innerHTML = html
+}
+
+function updateAutoRefreshEnabled(val){
+    configData.AUTO_REFRESH.enabled = val
+    renderConfigUI()   // 🔥 clave
+}
+
+function updateAutoRefreshDay(val){
+    configData.AUTO_REFRESH.day = val
+}
+
+function updateAutoRefreshHour(val){
+    configData.AUTO_REFRESH.hour = parseInt(val)
+}
+
+function updateField(ws, campo, valor){
+    configData[ws][campo] = valor
+}
+
+function updateDatasetField(ws, ds, campo, valor){
+    configData[ws][ds][campo] = valor
+}
+
+function agregarWorkspace(){
+
+    const nombre = prompt("Nombre del área de trabajo")?.trim()
+    if(!nombre) return
+
+    // claves reservadas del config
+    const reservados = ["AUTO_REFRESH","REPORT_LINK", "REPORT_LINK_HISTORICO"]
+
+    if(reservados.includes(nombre)){
+        alert("Ese nombre está reservado")
+        return
+    }
+
+    // validar duplicado
+    const existe = Object.keys(configData)
+        .some(k => k.toLowerCase() === nombre.toLowerCase())
+
+    if(existe){
+        alert(`Ya existe un área de trabajo llamada "${nombre}"`)
+        return
+    }
+
+    // validar caracteres seguros
+    const regex = /^[A-Za-z0-9_\-]+$/
+    if(!regex.test(nombre)){
+        alert("Solo se permiten letras, números, _ o -")
+        return
+    }
+
+    configData[nombre] = {
+        PBI_GROUP_ID: ""
+    }
+
+    renderConfigUI()
+}
+function eliminarWorkspace(ws){
+    if(!confirm("Eliminar workspace?")) return
+
+    delete configData[ws]
+    renderConfigUI()
+}
+
+function renombrarWorkspace(oldName, newName){
+
+    if(!newName){
+        alert("Nombre inválido")
+        renderConfigUI()
+        return
+    }
+
+    const nuevo = newName.trim()
+    const viejo = oldName.trim()
+
+    if(viejo === nuevo) return
+
+    // 🔥 validar duplicado (case insensitive)
+    const existe = Object.keys(configData)
+        .some(k => k !== oldName && k.toLowerCase() === nuevo.toLowerCase())
+
+    if(existe){
+        alert(`Ya existe un área de trabajo con el nombre "${nuevo}"`)
+        renderConfigUI()
+        return
+    }
+
+    configData[nuevo] = configData[oldName]
+    delete configData[oldName]
+
+    renderConfigUI()
+}
+function agregarDataset(ws){
+
+    const nombre = prompt("Nombre del dataset")?.trim()
+    if(!nombre) return
+
+    // validar duplicado (case insensitive)
+    const existe = Object.keys(configData[ws])
+        .some(k => k.toLowerCase() === nombre.toLowerCase())
+
+    if(existe){
+        alert(`Ya existe un dataset con el nombre "${nombre}"`)
+        return
+    }
+
+    configData[ws][nombre] = {
+        PBI_DATASET_ID: "",
+        IFRAME: ""
+    }
+
+    renderConfigUI()
+}
+function eliminarDataset(ws, ds){
+    delete configData[ws][ds]
+    renderConfigUI()
+}
+
+function renombrarDataset(ws, oldName, newName){
+
+    if(!newName) {
+        alert("Nombre inválido")
+        renderConfigUI()
+        return
+    }
+
+    const nuevo = newName.trim()
+    const viejo = oldName.trim()
+
+    if(viejo === nuevo) return
+
+    // 🔥 validar duplicado (case insensitive)
+    const existe = Object.keys(configData[ws])
+        .some(k => k !== oldName && k.toLowerCase() === nuevo.toLowerCase())
+
+    if(existe){
+        alert(`Ya existe un dataset con el nombre "${nuevo}"`)
+        renderConfigUI()
+        return
+    }
+
+    configData[ws][nuevo] = configData[ws][oldName]
+    delete configData[ws][oldName]
+
+    renderConfigUI()
+}
+
+function updateEmailEnabled(val){
+    configData.AUTO_REFRESH.email_enabled = val
+    renderConfigUI()   // 🔥 para grisar input
+}
+
+
+
+function updateEmail(val){
+    configData.AUTO_REFRESH.email = val
+}
+function toggleWorkspace(ws){
+
+    const estabaAbierto = workspacesAbiertos[ws]
+
+    // cerrar todos
+    workspacesAbiertos = {}
+
+    // abrir solo el clickeado (si estaba cerrado)
+    if(!estabaAbierto){
+        workspacesAbiertos[ws] = true
+    }
+
+    renderConfigUI()
+}
+
+function mostrarEstadoConfig(msg, esError=false){
+
+    const el = document.getElementById("estadoConfig")
+
+    el.innerText = msg
+    el.style.color = esError ? "red" : "green"
+    el.style.opacity = "1"
+
+    // limpiar timeout previo si existe
+    if(el.timeoutId){
+        clearTimeout(el.timeoutId)
+    }
+
+    // desaparecer luego de 3 segundos
+    el.timeoutId = setTimeout(()=>{
+        el.style.opacity = "0"
+        setTimeout(()=> el.innerText = "", 300)
+    }, 3000)
+}
+
+</script>
+
+<script>
+document.addEventListener('click', function(e) {
+  const a = e.target.closest('a');
+  if (!a) return;
+
+  if (a.getAttribute('href') === "#" || a.getAttribute('href') === "") {
+    e.preventDefault();
+  }
+});
+</script>
+
+
+</body>
+</html>

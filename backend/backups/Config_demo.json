@@ -1,0 +1,25 @@
+{
+  "AUTO_REFRESH": {
+    "enabled": false,
+    "day": "Lunes",
+    "hour": 16,
+    "email_enabled": true,
+    "email": "akoper@sullair.com.ar, andreskoper@gmail.com"
+  },
+  "Cliente": {
+    "PBI_GROUP_ID": "9773ffab-9e05-462a-9d1f-81ca76eaf903",
+    "Report": "https://tefsullairargentina-my.sharepoint.com/:f:/g/personal/akoper_sullair_com_ar/IgAIlv3s1r6PT53MRJ34SiCLAUzWsyt-4HKC3NYPSH92dF8?e=u110Yb",
+    "General": {
+      "PBI_DATASET_ID": "9c5960b9-a532-4bdf-8eb8-68e49190a46a",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiZDhhYjE3YzUtZDI5NC00M2ExLWI2N2MtNmY2YjAwOWMwOWJkIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV07": {
+      "PBI_DATASET_ID": "a4ded155-2001-4f35-93ff-e13fcbee4bdc",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNzUxMDYwOTItOTlkOC00ZmQxLWI3ZTctOTgwNjk5YThhZWMyIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV01": {
+      "PBI_DATASET_ID": "9b41ba9d-a224-4a45-abf2-bc9a5c43ff64",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYjgzZWMyOGEtZTk5Zi00ZTQ1LTk5NmMtNzE4MmFhMmE0YmRlIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  }
+}

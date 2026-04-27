@@ -1,0 +1,359 @@
+{
+  "AUTO_REFRESH": {
+    "enabled": true,
+    "day": "Viernes",
+    "hour": 11,
+    "email_enabled": true,
+    "email": "akoper@sullair.com.ar"
+  },
+  "KNAUF": {
+    "PBI_GROUP_ID": "6c456988-654a-430a-9102-8cb2ec1122ab",
+    "Report": "",
+    "QSK01": {
+      "PBI_DATASET_ID": "0aa6b209-a988-4e81-b069-dfb5617cb311",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiOTA5NzY0MDQtMmEwMi00NmJhLWI0ZGEtN2RiNDAwNDIwMzU3IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  },
+  "TGS": {
+    "PBI_GROUP_ID": "029a85d1-bdcd-47a4-9d6f-55b74ed2cbb3",
+    "Report": "https://tefsullairargentina-my.sharepoint.com/:b:/g/personal/cog_sullair_com_ar/IQAAyoXPfWKhQ4LaK_8U8s95AUh9rHMjLWi20ArPrwl1ZcI?e=8IbY0x",
+    "General Planta": {
+      "PBI_DATASET_ID": "28a6812e-a83f-4248-906e-d8d10ca22bdc",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiM2Q4NzRkZTctNzg5My00ODY1LThjMDMtYTJkMWU1YjEwMWMyIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV01": {
+      "PBI_DATASET_ID": "d754a5a9-14bf-4eb9-83e9-25a2228b084f",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYzZhOTk3MWMtNTVmMC00YTRjLThiOGUtMDQxMGEzMDI1MmRhIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV02": {
+      "PBI_DATASET_ID": "a540f630-2f94-4a36-a162-2c68e85b8d79",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiODZlMzIxMjctOTViZi00ZmUzLWE1ZDItN2E4MzM4YTdjM2Q0IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV03": {
+      "PBI_DATASET_ID": "7e666472-def7-4ea6-b7ab-fa34f613f7f8",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiODA0ZGM2NWEtYzU3OC00MzkzLWE3YWYtOTQyMTdhODgyMDg0IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "HSK01": {
+      "PBI_DATASET_ID": "dfec39a7-f282-4e71-914a-ed8e4d8b5f8c",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYzlmZDk2MjYtNTIyNy00NThlLWI4MDctN2M1NmQwMWFhYThhIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "HSK02": {
+      "PBI_DATASET_ID": "fb187e6d-859a-4d1a-b905-a28049ed73a3",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNmM5ZDk4M2QtZjdmZC00ZjNkLWJhNTQtODM2MmMyMTEwMDA5IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "HSK03": {
+      "PBI_DATASET_ID": "484e9444-45ff-4113-ad2f-2b97c5823781",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYjVjMjViYzUtYjNiMC00Njc0LWE2ODctNzVmMDU5NmZkMzE0IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  },
+  "PCR": {
+    "PBI_GROUP_ID": "732adf87-6b1f-478c-8dbb-eaecafbe857c",
+    "Report": "",
+    "General Planta": {
+      "PBI_DATASET_ID": "ac272b68-3f25-4410-9624-140bedc36380",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNTVhNTExZTQtNjNjMC00ZDI4LTgzMTItYTFhODA2MDJhODAxIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK01": {
+      "PBI_DATASET_ID": "e2196111-8658-447e-a920-96354255180b",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYTYzNGMwNGYtMTM4YS00ZWFhLWE2NjEtNDVmNWE1N2U5YjZmIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK02": {
+      "PBI_DATASET_ID": "e7c71a4b-f626-4cfa-91f8-4599436fd8dc",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNmVkZjQ2OTAtOGE4My00ZDgzLWJjMzItNjAyOTQwYjU1MWRkIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK03": {
+      "PBI_DATASET_ID": "3a13c6c1-6521-4054-97de-b6f598cee505",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiY2E5YjlkNDEtZDQzYy00MmVhLWE4MTEtNzg2ZTQxNjJkOWM4IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK04": {
+      "PBI_DATASET_ID": "140db7d1-8e6f-45dd-9e8f-49a4542ac32d",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMmJmMzg3YzAtMjM1NS00MzJkLTg4NWYtMDQxNTVjY2UxN2U2IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK05": {
+      "PBI_DATASET_ID": "ee7fa145-4587-4ff4-abe7-da9726ffdfc0",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNDQwNzFjZjgtMTFmOS00MjhhLWI5MjMtOTFhZTg1YTc0ZDUxIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  },
+  "KONA": {
+    "PBI_GROUP_ID": "37b15841-6ce2-45c2-8d54-9aee4c34d709",
+    "Report": "",
+    "QSV04": {
+      "PBI_DATASET_ID": "ff09e24c-d5c5-4e7b-8e5e-eeb81a11f230",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMWZhNmQ5OTEtN2JmYi00YTA1LWE2YzctZTllZTIwMGQ1N2JjIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  },
+  "ITA": {
+    "PBI_GROUP_ID": "cd18d54a-ef6e-4a62-8cf6-0707c34f75cb",
+    "Report": "",
+    "QSK01": {
+      "PBI_DATASET_ID": "69cdaf7c-0c06-444c-b7a7-3a24c24e73a7",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiOTg4ZTkxMGEtYmU5ZC00NjQ5LWFiNTAtMDA2NzRhZWY2NzBiIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  },
+  "PHOENIX_MZA": {
+    "PBI_GROUP_ID": "6acf20ee-23e1-4fb6-8e0c-7404adb7d728",
+    "Report": "",
+    "General Planta": {
+      "PBI_DATASET_ID": "d512de40-b4cb-4c35-9c73-57a6b262f93f",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYzViODhmYzMtNzFkMi00OTI3LWI4YTYtNzE2MTY2OGIyZWVlIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK01": {
+      "PBI_DATASET_ID": "f33abf71-0213-4ec8-9ab5-6551e694ad0a",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiOGQ0NTA0ZWYtZWQ5Zi00NTlhLWEyNGYtNjc0NmI1N2U2ODAyIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK02": {
+      "PBI_DATASET_ID": "72293701-3825-4400-8413-84443676401a",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiN2Q5Y2Q2ZmQtMjlhMi00ZGQ1LTk1NWItZDdhZDM2NWE3MTgwIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  },
+  "PHOENIX-MTMR": {
+    "PBI_GROUP_ID": "b9bfb3e2-3ea9-4a0b-8af3-f1c2b84b7d8a",
+    "Report": "https://tefsullairargentina-my.sharepoint.com/:b:/g/personal/cog_sullair_com_ar/IQAwBb2GBibPR4zJr9aAKZ7bAWOqzj7mtmjVYgH4ykPCk0w?e=2wW9og",
+    "General Planta": {
+      "PBI_DATASET_ID": "ccd09b62-4b62-4987-8869-81f02329b2c6",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiZDQ0ZTRkMGUtYzU0NC00ZDlhLTkyYzAtZTUwMTljYTlmNzNiIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK01": {
+      "PBI_DATASET_ID": "d6a2f2a6-3c86-4704-861c-7319aa9ecf82",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiZWNmMzVhY2MtZjdmMS00NDlmLThkOWEtNWY5OTg2ZmMyN2JiIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK02": {
+      "PBI_DATASET_ID": "e243ad90-933c-4079-a7e7-f5c825f37cc7",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMDI3NjM5YmEtNjQxMy00ZmQzLTk3MjctMzg1MDEwOGM3MGU2IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK03": {
+      "PBI_DATASET_ID": "271a6b33-72a6-4215-b1a2-5d69e467a727",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiZWQyZWE4NjYtZWFhMy00ZjcxLWJmMjItODUzNmRmZTJlZjcyIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK04": {
+      "PBI_DATASET_ID": "ed03ee6f-7edf-4273-a500-4a83ffa1c1ce",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiZDAyZWJhYmMtNjdhYi00NzZhLTgzZDQtMDY0ZmI3NmI1YzNjIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK05": {
+      "PBI_DATASET_ID": "a02333e7-673e-4563-87cc-7c9d6715d03c",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYzUwOTQwMjMtNDZiNi00ZWRkLTgzNmMtNWIzOGI5YTBjOGI0IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "ReportHistorico": "https://tefsullairargentina-my.sharepoint.com/:f:/g/personal/cog_sullair_com_ar/IgD3-scLd_5WRq4XSRYM_-KZAWcsB5CEa8VuSeN7x9vo2xk"
+  },
+  "UNBLOCK": {
+    "PBI_GROUP_ID": "c5033aed-35c1-43d1-8f96-eefdf8e313f8",
+    "Report": "https://tefsullairargentina-my.sharepoint.com/:b:/g/personal/cog_sullair_com_ar/IQDkhAz4IgR7RJWq4oq3SlXWAdO3AyzqPtEZRR05TvLS8d0?e=m3yIrh",
+    "General Planta": {
+      "PBI_DATASET_ID": "9e5abee5-6130-4ded-9937-d7817a8ff41b",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiZDg1OTIxM2QtYTUxMS00Yjc1LTk1MDktOWFkZTNiY2NmZDIyIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV01": {
+      "PBI_DATASET_ID": "9eb4bdab-22f9-468d-81b7-fdf714b72d06",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMThhOTMwZTYtODQ3YS00ZmJjLWE4NjUtYTYyODdjYzk3NjcxIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV07": {
+      "PBI_DATASET_ID": "7e26e26d-e4bd-4e60-9d19-13d60c869b94",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNDJkMzA5MTgtYzZmOS00ZDk3LWE5MDQtNjFiMDU4N2I4ZDZkIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "ReportHistorico": "https://tefsullairargentina-my.sharepoint.com/:f:/g/personal/cog_sullair_com_ar/IgCBaIsttw8cQYo7yKFWgQt9AQ-h3D8y12inu7_gfQ6ehPU"
+  },
+  "SAN LORENZO": {
+    "PBI_GROUP_ID": "5a14cac6-7866-4d09-ae5e-8fce36b3eaeb",
+    "Report": "",
+    "General Planta": {
+      "PBI_DATASET_ID": "b7169514-cbc5-43bf-86e9-886f29938b15",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYmE2YTJmYzEtNTJhYi00Yjk3LTliNWQtZmMwYWZhYzA1NjVmIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK01": {
+      "PBI_DATASET_ID": "3b57f70a-cdbf-4663-a89c-cbc54694a0b3",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNDkyMGQ1YTUtOTY2Ni00NTFlLTgyZDYtN2U5MmEwMmQ2NjQyIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK02": {
+      "PBI_DATASET_ID": "42d25485-9fec-46be-933e-804af0b04895",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMTE4MzkzYjAtZjE1MS00MjdlLWE5MTAtNGQ0YWMzZjJkNjUxIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  },
+  "GOBERNADOR COSTA": {
+    "PBI_GROUP_ID": "25c8baf7-1ae9-4f15-9a6c-70bf8858b8ee",
+    "Report": "",
+    "General Planta": {
+      "PBI_DATASET_ID": "268e4b85-c2cb-463e-97b6-cd25a27826c1",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYzM2Y2NmMmEtNzAwZi00ZTVmLWE0ZTgtYmIwZTkxNGFjZDg4IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK01": {
+      "PBI_DATASET_ID": "36ee3cb9-7183-4ab3-a320-a6ee7a264ebe",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNTI1MGY2MDktYjk1Ny00NDNjLTlmNDYtNTMwODU5NzA2NjVhIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK02": {
+      "PBI_DATASET_ID": "fd73df66-06ba-4f45-9a02-3a402951439e",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiZjI2OTRhMzktODRhNS00ODMyLWEwMWYtYjg2OWY3Y2E2YjlkIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV21": {
+      "PBI_DATASET_ID": "7f364c92-3f8f-4767-9cb0-681392073cf3",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiZTUzYTU3NjQtZmIxYi00MjFhLWFhNTAtZmI3ODFkZDViYjdmIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  },
+  "EL BOLSON": {
+    "PBI_GROUP_ID": "eae48dc6-0de7-4564-9a5b-b03c6774e6aa",
+    "Report": "",
+    "General Planta": {
+      "PBI_DATASET_ID": "0070dd26-d463-4e15-8cae-6de27a3a525d",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNzZjMDE5ZWItYjYzMi00ODFkLTkyYzgtNjc5NDM4YjkxNjE3IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK01": {
+      "PBI_DATASET_ID": "5f0af3d3-b6c7-4d17-a08a-e53baa881d66",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiZTI0OGY4YWYtYzc3ZC00NTUzLTllOWUtM2IxNGZmYTU4YTNiIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK02": {
+      "PBI_DATASET_ID": "68e715e4-6d3f-4bf9-88ee-2a53fffe153a",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiN2NmYTYzNzYtNTQ5MC00YzM5LTg0ZGYtZDQ3YmU3NmFjM2I0IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK03": {
+      "PBI_DATASET_ID": "e25c5deb-c90b-4eb9-b5e3-6c774f3c14c1",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNWIyYmRhNmItNTkyNC00Yjc0LWE4ZjgtNmJjODI0YWFlNjc1IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK04": {
+      "PBI_DATASET_ID": "17bd12b4-4499-4ce0-a1aa-4c466d8388bd",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMGQ4YjY5MTMtMTExZC00ZjUxLWIxN2YtYzBiYWIwMzU4ZjlmIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  },
+  "DPE_TOLHUIN": {
+    "PBI_GROUP_ID": "dd466d0c-2a2b-42a5-90eb-c00b7434a484",
+    "Report": "",
+    "General Planta": {
+      "PBI_DATASET_ID": "5b978081-7da1-4d79-a21b-d3372de9ce0d",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNzk3MzlhNDgtZjhiMi00ZTVkLWIwYzktMDYxZmU4NDcxOTIxIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV01": {
+      "PBI_DATASET_ID": "915f6f69-0707-4b64-af62-9b169bbafc43",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYWZmODA5NTAtZDUzMy00YTY2LThjMGYtZDE5ZmEwNzVkMjJiIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV02": {
+      "PBI_DATASET_ID": "a4c09e3e-aeeb-4550-99bc-327f71cf6c96",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiM2I4YmJiMzMtNmIwZS00NzMxLTgxNjktNDVlMjEwNzQ3ODYyIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK03": {
+      "PBI_DATASET_ID": "d6d1f441-3f49-41b9-b078-a97625b3110f",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiOTdjYzg0MDgtNGVjMC00NTkwLWIwYzgtYTk3NTE0OWUzODZmIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  },
+  "CENTENARIO": {
+    "PBI_GROUP_ID": "2733f12b-bc40-49d5-b838-a9406585c81d",
+    "Report": "",
+    "General Planta": {
+      "PBI_DATASET_ID": "4ae393bf-bb3f-4260-807e-039c400ad3ef",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiODUxNjNkNTQtZTM0NC00MGFmLTliOGMtZDkyNWUzZTNmNWE0IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV01": {
+      "PBI_DATASET_ID": "c698611f-bac2-44a2-a06c-1ec53d80458b",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiOTU0ZDJlYjUtMDc2Yy00ZjBiLWIxYmYtOWZkZjNmOGUxM2MzIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV03": {
+      "PBI_DATASET_ID": "27cc2af9-d78c-401e-abc1-b73952758481",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMjRjYTdlZjgtYTcxYy00Nzg4LTg1YjUtOThlN2EzZjQ1ODI2IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV05": {
+      "PBI_DATASET_ID": "1080f59f-b9bc-4bee-bea3-24c3420344d8",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNDM2NGM4ODMtZGQ0ZC00NDg3LTgzYTktMDllNDk0MTcyNmE0IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV06": {
+      "PBI_DATASET_ID": "55c44ab8-90ee-4640-9161-4b3cc79e902b",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYTVjMmFjOWMtNzhhYi00ZWEzLWEyNjItYTU0YWI2MWVjMTA0IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV07": {
+      "PBI_DATASET_ID": "e2592d9e-3f69-444c-927f-326da1c79149",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYWYzNTIxYjgtZDdlOS00ZTlmLWE1MzktZGUyMzQzNjk1ZWRiIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "ReportHistorico": ""
+  },
+  "AUSTIN POWDER": {
+    "PBI_GROUP_ID": "28c0e380-7d69-4255-a2da-59c74c1d0419",
+    "Report": "https://tefsullairargentina-my.sharepoint.com/:b:/g/personal/cog_sullair_com_ar/IQCMlIbjQgaIRJAKKYsfB1nTAdVKlKILQoJy5CP-0N5ON0M?e=jCY7X8",
+    "General Planta": {
+      "PBI_DATASET_ID": "be88f299-03c1-49c8-8c10-e98a8943af76",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMTQ4ODJlMDUtOWI4Ny00ZjNhLWE0ZWYtNmYxYWExMzYzZmIyIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK01": {
+      "PBI_DATASET_ID": "604a2398-5adc-40c8-a856-a10106adec27",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYjkzYWIzZTAtZTEzZi00MzQwLWFlYzctOWEzMWY1OTkwMDUwIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK02": {
+      "PBI_DATASET_ID": "428275ee-6672-47ab-aaa6-9e01fa52fa6d",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNzI1ODI2MDctNzI1ZC00NWQwLWI5NzEtZmI1MjFkNmM1Mjk4IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK03": {
+      "PBI_DATASET_ID": "3087b996-fa98-4469-a2cd-420dc3ffce15",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYmZiMzI2ODEtM2I1MS00MzIxLWI2ZWMtNTlkMTIzZDcwODgyIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK04": {
+      "PBI_DATASET_ID": "bd7f2c17-bf03-4f9d-ae04-ca68761776dd",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYTE4YTkzYzktMWZmZC00MWZhLTk4N2QtNDI1MDczZWY3MmIyIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK05": {
+      "PBI_DATASET_ID": "7e7ac9af-aae4-4db7-a2a6-abb622e8d75b",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYjJiN2Y1ZDUtZGRiZS00ZjMyLTk5ZTMtZWI3MGUyYWM4OTRlIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK06": {
+      "PBI_DATASET_ID": "ae4afbd8-5737-4518-824f-b93a227cdc17",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMmQ1NGZkODMtYjYwNi00MmU0LThhOGItZDM5MzYxMWE3ODIwIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "ReportHistorico": "https://tefsullairargentina-my.sharepoint.com/:f:/g/personal/cog_sullair_com_ar/IgBrDM0grH8XSq6yemE8wgY-Aey6p7bbdTlA3IyyMIOvQu4"
+  },
+  "AGUADA BAGUALES": {
+    "PBI_GROUP_ID": "b73624bd-32ab-47e5-8b37-c26da6ab7f94",
+    "Report": "https://tefsullairargentina-my.sharepoint.com/:b:/g/personal/cog_sullair_com_ar/IQBrJalSKQlYRZVRx0VNufmAAVjtCs9TKXIEB38woO2FXNg?e=8MzkAB",
+    "General Planta": {
+      "PBI_DATASET_ID": "8e0431a3-8613-40ca-b88f-d77d67e5c412",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYTc1NDNkOTktYzAxMi00YjMwLWFiZjMtODQ2ODk4MzE2NzU2IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV01": {
+      "PBI_DATASET_ID": "419fcbca-613c-4e71-b414-ac036676ec58",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMDRhMmIyN2YtNTBlZS00ZjYxLTlhZDMtOWRkN2ZhZDZiOWZlIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV02": {
+      "PBI_DATASET_ID": "1e3882f0-de2f-43a3-b24c-c76481f80f30",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMTMwNzg1MGQtMjAxMC00OTA0LTg2MjMtNWUwNzhiZGMyODY3IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV03": {
+      "PBI_DATASET_ID": "4d6e652e-c565-4f31-b743-d0f6dfb58cbe",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMzc4Njc1MWMtNzdmZi00ZjUyLTlhZWItMGExN2EyNWU5MWVlIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV05": {
+      "PBI_DATASET_ID": "57f4796b-9a86-4c17-8848-890818464bf2",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiMjk1MThlNmUtMWVhYi00MjQyLTg3MDctZGI3MTZlZDM3N2JjIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV06": {
+      "PBI_DATASET_ID": "4c237bd8-6c1c-4760-8670-f903434a9777",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiYTQ3ODBiMWQtOGU3ZC00YzMzLWIwMjMtMzg1YmQ0YWI5MWNkIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "ReportHistorico": "https://tefsullairargentina-my.sharepoint.com/:f:/g/personal/cog_sullair_com_ar/IgCUyLFFDH38RYx7VXxVNaitAb6n5cu-Er7VGctrcAexSAo"
+  },
+  "GEOPARK": {
+    "PBI_GROUP_ID": "fc09e071-21bb-4e0f-b548-ab452fcc77bd",
+    "Report": "https://tefsullairargentina-my.sharepoint.com/:b:/g/personal/cog_sullair_com_ar/IQA7zaAx1nciTKeO97i8nnrsAaZpcJTLByG_wsb4gINxm-A?e=ECnnA1",
+    "General Planta": {
+      "PBI_DATASET_ID": "41f2e68a-cfa8-4c5c-b6dc-efef8e50c5f8",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiOTRmYzI5NzgtYWE1Yi00NDI2LTg4NWMtYTliNGQ3NWYwYTYwIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV01": {
+      "PBI_DATASET_ID": "c3e7b598-27b8-44ee-b101-445d3984f2e5",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNjNjZDRmNDAtMzc2Yi00MWRjLTkyYjMtYTBiMzZhMjgyZTU3IiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSV02": {
+      "PBI_DATASET_ID": "9fabb3d0-4151-4da0-9847-00a3a1ed4017",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNWM4MDM5NjUtN2Y5OC00ZTlhLTkxMWItZjBmN2FhZjViNmIxIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "ReportHistorico": "https://tefsullairargentina-my.sharepoint.com/:f:/g/personal/cog_sullair_com_ar/IgBm1dx6_HeWRbE-ggG9wd5VAU6ePP0bwaNMMvBP44LSZNo"
+  },
+  "M.AGUILAR": {
+    "PBI_GROUP_ID": "e9558098-e614-4143-87a6-b7b1d8d22141",
+    "Report": "",
+    "General Planta": {
+      "PBI_DATASET_ID": "34236436-124b-42b6-851b-ca09035a0e9b",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiZGIwNzVkOWUtODJkMC00Yzg5LWI2NzAtZDg4MjhiMDhhNTczIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK01": {
+      "PBI_DATASET_ID": "59304e86-0077-4ec2-8bd9-f27fa413d1aa",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiNTExZGEzZTYtY2NmNy00YjhiLTg0Y2MtZWFmNjVjNGJmMDZiIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    },
+    "QSK02": {
+      "PBI_DATASET_ID": "b8dd11de-9bcc-4808-8a42-5459feae1678",
+      "IFRAME": "https://app.powerbi.com/view?r=eyJrIjoiOTQ0YWFiM2QtNDAwNC00Y2FiLWEzNTctOTkxNzY3OTk5MWZiIiwidCI6IjY1YmZiMmZmLWQwMjctNGE3Ni04ZjE1LWFlYTdlNzE4MjQ4YiIsImMiOjR9"
+    }
+  }
+}
