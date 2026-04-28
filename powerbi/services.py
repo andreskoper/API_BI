@@ -160,7 +160,7 @@ def normalizar_fechas_inclusivas(fecha_inicial, fecha_final):
     fi = datetime.strptime(fecha_inicial, "%Y-%m-%d")
     ff = datetime.strptime(fecha_final, "%Y-%m-%d")
 
-    # 🔥 convierte rango inclusivo → exclusivo
+    # convierte rango inclusivo → exclusivo
     ff = ff + timedelta(days=1)
 
     return fi.strftime("%Y-%m-%d"), ff.strftime("%Y-%m-%d")
@@ -183,7 +183,7 @@ def validar_fechas(fecha_inicial, fecha_final):
     if fi > ff:
         raise ValueError("La fecha inicial no puede ser mayor que la final")
 
-    if (ff - fi).days > 7:
+    if (ff - fi).days >= 7:
         raise ValueError("El rango de fechas no puede superar 7 días")
 
     if (hoy - fi).days > 365:
@@ -482,11 +482,12 @@ EJECUTANDO_AUTO = False
 
 
 def calcular_fechas_auto():
-    ahora = datetime.now()
+    ahora = datetime.now() - timedelta(days=1)
+    
 
-    fin = ahora.replace(hour=0, minute=0, second=0, microsecond=0)
-    inicio = fin - timedelta(days=7)                                ############CANTIDAD DE DIAS A ACTUALIZAR############
-
+    fin = ahora.replace(hour=0, minute=0, second=0, microsecond=0) 
+    inicio = fin - timedelta(days=6)                                ############CANTIDAD DE DIAS A ACTUALIZAR############
+    #print(inicio,fin)
     return inicio.strftime("%Y-%m-%d"), fin.strftime("%Y-%m-%d")
 
 
